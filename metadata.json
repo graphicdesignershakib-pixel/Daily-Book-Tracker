@@ -1,0 +1,6 @@
+{
+  "name": "Book Reading Tracker",
+  "description": "A calm, editorial productivity system for serious readers to track goals, manage a custom book library, record sessions, and analyze reading habits.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

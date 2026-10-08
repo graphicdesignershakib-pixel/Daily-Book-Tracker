@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Hind Siliguri", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Newsreader", "Hind Siliguri", Georgia, Cambria, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF9F5;
+    color: #1C1917;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Tactile Book Aesthetics */
+.book-spine-crease {
+  box-shadow: inset 4px 0 6px -2px rgba(0, 0, 0, 0.25), inset -2px 0 4px -2px rgba(255, 255, 255, 0.15);
+}
+
+.book-shadow {
+  box-shadow: 2px 6px 16px -3px rgba(28, 25, 23, 0.12), 0 2px 4px -1px rgba(28, 25, 23, 0.06);
+}
+
+.book-shadow-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.book-shadow-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 12px 24px -4px rgba(28, 25, 23, 0.16), 0 4px 8px -2px rgba(28, 25, 23, 0.08);
+}
+
+/* Midnight Dark Slate theme overrides */
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+[data-theme="dark"] body,
+[data-theme="dark"] .bg-\[\#FAF9F5\] {
+  background-color: #111113 !important;
+  color: #EDEDF0 !important;
+}
+[data-theme="dark"] .bg-white {
+  background-color: #18181C !important;
+}
+[data-theme="dark"] .bg-stone-50,
+[data-theme="dark"] .bg-stone-50\/70,
+[data-theme="dark"] .bg-stone-100 {
+  background-color: #222228 !important;
+}
+[data-theme="dark"] .border-stone-100,
+[data-theme="dark"] .border-stone-200,
+[data-theme="dark"] .border-stone-200\/50,
+[data-theme="dark"] .border-stone-200\/60,
+[data-theme="dark"] .border-stone-200\/80,
+[data-theme="dark"] .border-stone-200\/90,
+[data-theme="dark"] .border-stone-300 {
+  border-color: #2D2D36 !important;
+}
+[data-theme="dark"] .text-stone-900,
+[data-theme="dark"] .text-stone-950 {
+  color: #F4F4F6 !important;
+}
+[data-theme="dark"] .text-stone-800 {
+  color: #E2E2E6 !important;
+}
+[data-theme="dark"] .text-stone-700 {
+  color: #C8C8D0 !important;
+}
+[data-theme="dark"] .text-stone-600 {
+  color: #9E9EA8 !important;
+}
+[data-theme="dark"] .text-stone-500 {
+  color: #7E7E8A !important;
+}
+[data-theme="dark"] .text-stone-400 {
+  color: #63636E !important;
+}
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background-color: #222228 !important;
+  color: #F4F4F6 !important;
+  border-color: #353540 !important;
+}
+
+/* Warm Sepia Literary theme overrides */
+[data-theme="sepia"] {
+  color-scheme: light;
+}
+[data-theme="sepia"] body,
+[data-theme="sepia"] .bg-\[\#FAF9F5\] {
+  background-color: #F4EFEA !important;
+  color: #261D16 !important;
+}
+[data-theme="sepia"] .bg-white {
+  background-color: #FDFBF7 !important;
+}
+[data-theme="sepia"] .bg-stone-50,
+[data-theme="sepia"] .bg-stone-50\/70 {
+  background-color: #EFE7DE !important;
+}
+[data-theme="sepia"] .bg-stone-100 {
+  background-color: #E8DFD3 !important;
+}
+[data-theme="sepia"] .border-stone-100,
+[data-theme="sepia"] .border-stone-200,
+[data-theme="sepia"] .border-stone-200\/50,
+[data-theme="sepia"] .border-stone-200\/60,
+[data-theme="sepia"] .border-stone-200\/80,
+[data-theme="sepia"] .border-stone-200\/90,
+[data-theme="sepia"] .border-stone-300 {
+  border-color: #DDD2C4 !important;
+}
+[data-theme="sepia"] .text-stone-900,
+[data-theme="sepia"] .text-stone-950 {
+  color: #261D16 !important;
+}
+[data-theme="sepia"] .text-stone-800 {
+  color: #382C22 !important;
+}
+[data-theme="sepia"] .text-stone-700 {
+  color: #4D3D30 !important;
+}
+[data-theme="sepia"] .text-stone-600 {
+  color: #6A5645 !important;
+}
+[data-theme="sepia"] .text-stone-500 {
+  color: #8A725D !important;
+}
+[data-theme="sepia"] .text-stone-400 {
+  color: #A38C76 !important;
+}
+[data-theme="sepia"] input,
+[data-theme="sepia"] select,
+[data-theme="sepia"] textarea {
+  background-color: #FAF6F0 !important;
+  color: #261D16 !important;
+  border-color: #D6C8B8 !important;
+}
+
+/* Custom crisp scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 113, 108, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 113, 108, 0.4);
+}
